@@ -33,8 +33,6 @@ body {
 }
 
 .layout-container {
-    width: 1300px;
-    max-width: 1300px;
     min-width: 800px;
     display: grid;
     gap: 64px;

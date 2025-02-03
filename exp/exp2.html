@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Experiment 2</h1>
+    <h2>Open the console to see how many animals I have!</h2>
+
+    <script>
+        prompt('How many animals do you think I have?');
+
+        var animal = ['cow', 'bunny', 'frog', 'duck'];
+
+        function randomInt(min, max){
+            var numOfValues = max - min + 1;
+            var randomNum = Math.random();
+            var randomVal = randomNum * numOfValues;
+            var roundedRandomVal = Math.floor(randomVal);
+            var finalNum = min + roundedRandomVal;
+
+            return finalNum;
+        }
+
+        for (let i = 0; i < 7; i++) {
+            console.log('I have ' + i + ' ' + animal[randomInt(0,3)] + 's.');
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacation Gone Wrong Madlibs V1</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bayon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>VACATION GONE WRONG!</h1>
+    </header>
+    <main>
+        <form id="madlibs-form">
+            <label for="location">Enter a location:</label>
+            <input type="text" id="location" required>
+
+            <label for="vehicle">Enter a vehicle:</label>
+            <input type="text" id="vehicle" required>
+
+            <label for="verb">Enter a verb:</label>
+            <input type="text" id="verb" required>
+
+            <label for="place">Enter a place:</label>
+            <input type="text" id="place" required>
+
+            <label for="animal">Enter an animal:</label>
+            <input type="text" id="animal" required>
+
+            <label for="object">Enter an object:</label>
+            <input type="text" id="object" required>
+
+            <label for="adjective">Enter an adjective:</label>
+            <input type="text" id="adjective" required>
+
+            <label for="tool">Enter a tool:</label>
+            <input type="text" id="tool" required>
+
+            <input type="submit" value="Generate Story">
+        </form>
+        <section id="story-output" class="hidden">
+            <!-- for madlib textcontent replacement -->
+            <p id="story"></p>
+        </section>
+    </main>
+</body>
+</html>

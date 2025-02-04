@@ -1,0 +1,36 @@
+body {
+    font-family: "Belanosima", serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-image: url('images/madlibsBackground.svg');
+}
+
+body h1 {
+    font-family: "Bayon", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* example change later */
+input[type="text"]:focus {
+    border: 1px solid #D6D9DC;
+    outline: dashed gray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

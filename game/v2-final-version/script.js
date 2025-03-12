@@ -15,7 +15,7 @@
   
     const swishSound = new Audio("audio/basketballMake.mp3");
     const missSound = new Audio("audio/basketballBackboard.mp3");
-    const passSound = new Audio("pass.mp3");
+    const passSound = new Audio("audio/pass.mp3");
   
     function updateScoreboard() {
       player1ScoreEl.textContent = player1Score;

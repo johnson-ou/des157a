@@ -162,7 +162,7 @@ main {
 }
 #controls button:disabled {
   background-color: #aaa;
-  border-color: #aaa;
+  border-color: #b4b4b4;
   cursor: not-allowed;
   color: #fff;
 }
@@ -178,7 +178,6 @@ footer {
 p {
   margin: 0;
   font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }

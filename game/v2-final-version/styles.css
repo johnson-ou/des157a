@@ -1,165 +1,184 @@
+@font-face {
+  font-family: 'DS-Digital';
+  src: url('fonts/DS-DIGII.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
 body {
-    font-family: Arial, sans-serif;
-    background: url('images/background.jpg') no-repeat center center fixed;
-    background-color: grey;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-
-  header {
-    text-align: center;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-  }
-  
-  #scoreboard {
-    display: flex;
-    justify-content: space-around;
-    font-size: 1.5em;
-  }
-  
-  
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-  }
-  
-  #game-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
-  }
-  
-  
-  .player {
-    flex: 1;
-    text-align: center;
-  }
-  
-  .player img {
-    max-width: 60%;
-    height: auto;
-  }
-  
-  
-  #message-area {
-    flex: 0 0 200px;
-    text-align: center;
-    margin: 0 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 8px;
-  }
-  
-  #controls button {
-    font-size: 1.2em;
-    padding: 10px 20px;
-    margin: 0 10px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #0066cc;
-    color: #fff;
-  }
-  
-  #controls button:disabled {
-    background-color: #aaa;
-    cursor: not-allowed;
-  }
-  
-  
-  footer {
-    text-align: center;
-    color: rgba(0, 0, 0, 0.5);
-  }
-
-  p {
-    margin: 0;
-  }
-
-  #scoreboard {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #2F2EB5;
-    gap: 20px;
-    padding: 20px;
-    border-radius: 20px;
-    border: 10px solid white;
-  }
-
-  #time {
-    color: white;
-    background-color: black;
-    border: 2px solid white;
-    border-radius: 10px;
-  }
-
-  #time > h1 {
-    margin: 0;
-    
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-
-  #bottom-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-  }
-
-  .score-container {
-    width: 120px;
-  }
-
-  .score {
-    text-align: center;
-    background-color: black;
-    border-radius: 10px;
-    border: 2px solid white;
-  }
-
-  .team {
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  .score > h1 {
-    margin: 0;
-    color: white;
-    text-shadow: 0px 0px 20px rgb(255, 231, 49);
-  }
-
-  .team > h3 {
-    margin: 0; 
-    color: white;
-  }
-
-
-
-  @media (max-width: 750px) {
-    body {
-      overflow-x: scroll;
-    }
-  }
-  
-  @media (min-width: 1200px) {
-    body {
-      margin: 0 auto;
-      max-width: 1200px;
-    }
-  }
-  
+  background: url('images/basketballBackground.svg') no-repeat center center fixed;
+  background-color: grey;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#game-wrapper {
+  width: 1200px;
+  height: 750px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#game-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 70px);
+  padding: 15px;
+  margin: auto;
+}
+.column {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#left-column,
+#right-column {
+  justify-content: center;
+}
+#center-column {
+  max-width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 140px;
+}
+.player {
+  text-align: center;
+}
+.player img {
+  max-width: 80%;
+  height: auto;
+}
+#scoreboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2F2EB5;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  border: 10px solid white;
+}
+#time {
+  color: white;
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+#time > h1 {
+  margin: 0;
+  font-family: 'DS-Digital', sans-serif;
+  padding: 0 60px;
+}
+#bottom-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+.score-container {
+  width: 120px;
+}
+.score {
+  text-align: center;
+  background-color: black;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+.score > h1 {
+  margin: 0;
+  font-family: 'DS-Digital', sans-serif;
+  color: white;
+  text-shadow: 0px 0px 20px rgb(255, 231, 49);
+}
+.team > h3 {
+  margin: 0;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+}
+#message-area {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 12px;
+  width: 100%;
+  border: 2px solid #2F2EB5;
+  color: #333;
+  font-size: 1.2em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#controls {
+  margin-top: 10px;
+}
+#controls button {
+  font-size: 1.2em;
+  padding: 12px 24px;
+  margin: 0 10px;
+  cursor: pointer;
+  border: 2px solid #FFE731;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #2F2EB5, #1F1EA0);
+  color: #FFE731;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s, transform 0.1s;
+}
+#controls button:hover {
+  background: linear-gradient(145deg, #4443d3, #2F2EB5);
+}
+#controls button:active {
+  transform: translateY(2px);
+  background: linear-gradient(145deg, #1F1EA0, #131280);
+}
+#controls button:disabled {
+  background-color: #aaa;
+  border-color: #aaa;
+  cursor: not-allowed;
+  color: #fff;
+}
+footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 50px;
+}
+p {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}

@@ -5,65 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Basketball PIG Game</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
   <script src="script.js" defer></script>
 </head>
 <body>
-
+  <div id="game-wrapper">
   <main>
-    <div id="scoreboard">
-      <div id="time">
-        <h1>1:57</h1>
-      </div>
-      <div id="bottom-row">
-        <div class="score-container">
-          <div class="score">
-            <h1 id="player1-score">0</h1>
-          </div>
-          <div class="team">
-            <h3>HOME</h3>
-          </div>
-        </div>
-
-        <div class="score-container">
-          <div class="score">
-            <h1 id="player2-score">0</h1>
-          </div>
-          <div class="team">
-            <h3>VISITOR</h3>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-
-
     <div id="game-container">
-      <!-- Left side player image -->
-      <div id="player1" class="player">
-        <img src="images/ballerRivside.png" alt="Player 1">
+      <div class="column" id="left-column">
+        <div class="player">
+          <img src="images/ballerRivside.png" alt="Player 1">
+        </div>
       </div>
 
-      <!-- Message / status area -->
-      <div id="message-area">
-        <p id="message">Welcome to the Basketball Game! Player 1 starts.</p>
+      <div class="column" id="center-column">
+        <div id="scoreboard">
+          <div id="time">
+            <h1>1:57</h1>
+          </div>
+          <div id="bottom-row">
+            <div class="score-container">
+              <div class="score">
+                <h1 id="player1-score">0</h1>
+              </div>
+              <div class="team">
+                <h3>HOME</h3>
+              </div>
+            </div>
+
+            <div class="score-container">
+              <div class="score">
+                <h1 id="player2-score">0</h1>
+              </div>
+              <div class="team">
+                <h3>VISITOR</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="message-area">
+          <p id="message">Welcome to UC Davis against UC Riverside Basketball Game! Player 1 starts.</p>
+        </div>
+
+        <div id="controls">
+          <button id="shoot-btn">Shoot</button>
+          <button id="pass-btn">Pass</button>
+        </div>
       </div>
 
-      <!-- Right side player image -->
-      <div id="player2" class="player">
-        <img src="images/ballerGunrock.png" alt="Player 2">
+      <div class="column" id="right-column">
+        <div class="player">
+          <img src="images/ballerGunrock.png" alt="Player 2">
+        </div>
       </div>
-    </div>
-
-    <!-- Game Controls -->
-    <div id="controls">
-      <button id="shoot-btn">Shoot</button>
-      <button id="pass-btn">Pass</button>
     </div>
   </main>
 
   <footer>
     <p>&copy; Johnson Ou 2025 <a href="sources.html">Sources</a></p>
   </footer>
+</div>
 </body>
 </html>

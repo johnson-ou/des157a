@@ -1,34 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Every Picture Project Development</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Every Picture Project Development</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 <body>
-    <header>
-        <h1>Every Picture Project Development</h1>
-    </header>
-    <main>
-        <article>
-            <h2>Conceptual Changes</h2>
-            <p> With my seperate ideas of centering my project around collectibles I own, Smiskis, and pictures of my favorite and most commonly visited places around Davis, I decided to compromise by combining the two ideas and have a "My day in the life as a Smiski". With their actionable poses, I believe I could find locations and visually interesting poses to create somewhat of a personal story.
-            </p>
-        </article>
-        <article>
-            <h2>Interaction Changes</h2>
-            <p> While I initially thought about using the mouse scroll for users to move from one Smiski to another, a hovering effect would be more intuitive for users to put their mouse over for the overlay to appear. This way, it would also allow for users to quickly navigate back and forth from one Smiski to another. Another key change is how I'm aiming to keep the mouse hotspot on the Smiski rather than changing it to the overlay (so the overlay would disappear if the mouse hovers off the Smiski rather than the image overlay).
-            </p>
-        </article>
-    </main>
-    <footer>
-        <p>&copy; Written by Johnson</p>
-    </footer>
-</body>
+  <header>
+    <h1>Every Picture Project Development</h1>
+  </header>
+  
+  <main class="blog-content">
+    <article>
+      <h2>Conceptual Changes</h2>
+      <p>
+        With my separate ideas of centering my project around collectibles I own, Smiskis, and pictures of my favorite and most commonly visited places around Davis, I decided to compromise by combining the two ideas and have a "My day in the life as a Smiski". With their actionable poses, I believe I could find locations and visually interesting poses to create somewhat of a personal story.
+      </p>
+    </article>
+    <article>
+      <h2>Interaction Changes</h2>
+      <p>
+        While I initially thought about using the mouse scroll for users to move from one Smiski to another, a hovering effect would be more intuitive for users to put their mouse over for the overlay to appear. This way, it would also allow for users to quickly navigate back and forth from one Smiski to another. Another key change is how I'm aiming to keep the mouse hotspot on the Smiski rather than changing it to the overlay (so the overlay would disappear if the mouse hovers off the Smiski rather than the image overlay).
+      </p>
+    </article>
+  </main>
+  
+  <section id="interactive-demo">
+    <div class="image-container">
+      <img src="images/smiskiAll.jpeg" alt="Main Smiskis" class="main-image">
+    
+      <div class="hotspot hotspot1"></div>
+      <div class="hotspot hotspot2"></div>
+      <div class="hotspot hotspot3"></div>
+      <div class="hotspot hotspot4"></div>
+      <div class="hotspot hotspot5"></div>
+  
+      <div class="overlay-container overlay1">
+        <img src="images/smiskiCouch.jpeg" alt="Smiski laying down on a couch" class="overlay-image">
+        <p class="overlay-text">Me relaxing on the couch after a long day.</p>
+      </div>
+      <div class="overlay-container overlay2">
+        <img src="images/smiskiExercise.JPG" alt="Smiski doing exercise at the gym" class="overlay-image">
+        <p class="overlay-text">Me staying active with some exercise at the gym.</p>
+      </div>
+      <div class="overlay-container overlay3">
+        <img src="images/smiskiRoom.jpeg" alt="Smiski chilling in room" class="overlay-image">
+        <p class="overlay-text">Me enjoying a cozy night in my room.</p>
+      </div>
+      <div class="overlay-container overlay4">
+        <img src="images/smiskiArb.jpeg" alt="Smiski meditating at the arboretum" class="overlay-image">
+        <p class="overlay-text">Me exploring the arboretum for some fresh air.</p>
+      </div>
+      <div class="overlay-container overlay5">
+        <img src="images/smiskiCoffee.jpeg" alt="Smiski reading a book at Philz" class="overlay-image">
+        <p class="overlay-text">Me locking in at Philz getting good work done.</p>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <p>&copy; Written by Johnson</p>
+  </footer>
 
+</body>
 </html>
